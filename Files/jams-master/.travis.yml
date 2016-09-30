@@ -1,0 +1,35 @@
+language: python
+
+sudo: false
+
+cache:
+  directories:
+  - $HOME/env
+
+notifications:
+  email: false
+
+python:
+    - "2.7"
+    - "3.4"
+    - "3.5"
+
+before_install:
+    - bash .travis_dependencies.sh
+    - export PATH="$HOME/env/miniconda$TRAVIS_PYTHON_VERSION/bin:$PATH";
+    - hash -r
+    - source activate test-environment
+
+install:
+    # install your own package into the environment
+    - pip install -e .[display]
+
+script:
+    - nosetests -v -w tests/ --with-coverage --cover-erase --cover-package=jams
+
+after_success:
+    - coveralls
+    - pip uninstall -y jams
+
+after_failure:
+    - pip uninstall -y jams
