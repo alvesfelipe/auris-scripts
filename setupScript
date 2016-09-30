@@ -1,0 +1,53 @@
+#!/bin/bash
+# Script made to install all dependecies to use Midi-Melody for Music_for_deaf project.
+
+echo "Installing FFMPEG"
+sudo add-apt-repository ppa:mc3man/trusty-media
+sudo apt-get update
+sudo apt-get install ffmpeg
+
+echo "Installing numpy e scipy"
+sudo apt-get install python-numpy python-scipy
+
+echo "Installing Vamp-Examples"
+cd ~/MUSIC_DEAF/music_for_deaf/auris-core/auris-scripts/Files/vamp-1.1.0
+sudo python setup.py install
+sudo apt-get install vamp-examples
+sudo apt-get install libboost-filesystem-dev
+sudo apt-get install libpstreams-dev
+
+echo "Copying Melodia Lib"
+cd ~/MUSIC_DEAF/music_for_deaf/auris-core/auris-scripts/Files/MTG-MELODIA 1.0
+sudo cp mtg-melodia.cat /usr/lib/vamp/
+sudo cp mtg-melodia.n3 /usr/lib/vamp/
+sudo cp mtg-melodia.so /usr/lib/vamp/
+sudo cp README_linux64.txt /usr/lib/vamp/
+sudo cp MELODIA\ -\ License.txt /usr/lib/vamp/
+
+echo "Installing Python-PIP"
+sudo apt install python-pip
+pip install --upgrade pip
+
+echo "Installing other dependencies"
+sudo pip install wheel
+sudo pip install pandas
+sudo pip install functools32
+sudo pip install --upgrade setuptools
+sudo pip install Distribute
+sudo pip install scikits.samplerate
+
+cd ~/MUSIC_DEAF/music_for_deaf/auris-core/auris-scripts/Files/libsamplerate-0.1.8
+./configure
+make
+sudo make install
+
+echo "Installing MIDIUtil"
+cd ~/MUSIC_DEAF/music_for_deaf/auris-core/auris-scripts/Files/MIDIUtil-0.89
+sudo python setup.py install
+
+echo "Installing Jams"
+cd ~/MUSIC_DEAF/music_for_deaf/auris-core/auris-scripts/Files/jams-master
+sudo python setup.py install
+
+echo "Installing Librosa"
+sudo pip install librosa==0.4.0
