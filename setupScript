@@ -27,7 +27,7 @@ sudo pip install wheel
 echo "##################################################"
 sudo pip install cython
 echo "##################################################"
-sudo pip install pandas
+sudo apt-get install python-pandas
 echo "##################################################"
 sudo pip install functools32
 echo "##################################################"
