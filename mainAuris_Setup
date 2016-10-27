@@ -31,5 +31,5 @@ echo "##################################################"
 
 echo "Installing all dependencies"
 cd ~/MUSIC_DEAF/music_for_deaf/auris-scripts
-sudo chmod 755 setupScript
-./setupScript
+sudo chmod 755 dependencies_Setup
+./dependencies_Setup
