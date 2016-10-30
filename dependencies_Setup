@@ -75,3 +75,11 @@ echo "##################################################"
 echo "Installing Flask"
 sudo pip install flask
 echo "##################################################"
+
+echo "Installing Puredata - BE SURE YOU ARE USING UBUNTU 14.04LTS or less version."
+sudo add-apt-repository ppa:eighthave/pd-extended
+sudo apt-get update
+sudo apt-get install pd-extended
+cd ~/MUSIC_DEAF/music_for_deaf/auris-core/auris-filter/src
+g++ main.cpp -o main
+echo "##################################################"
