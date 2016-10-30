@@ -4,21 +4,21 @@
 echo "Installing FFMPEG"
 sudo add-apt-repository ppa:mc3man/trusty-media
 sudo apt-get update
-sudo apt-get install ffmpeg
+sudo apt-get install ffmpeg -y
 echo "##################################################"
 
 echo "Installing numpy e scipy"
-sudo apt-get install python-numpy python-scipy
+sudo apt-get install python-numpy python-scipy -y
 echo "##################################################"
 
 echo "Installing Libs"
-sudo apt-get install libboost-filesystem-dev
-sudo apt-get install libpstreams-dev
-sudo apt-get install libfreetype6-dev
+sudo apt-get install libboost-filesystem-dev -y
+sudo apt-get install libpstreams-dev -y
+sudo apt-get install libfreetype6-dev -y
 echo "##################################################"
 
 echo "Installing Python-PIP"
-sudo apt install python-pip
+sudo apt-get install python-pip -y
 pip install --upgrade pip
 echo "##################################################"
 
@@ -27,7 +27,7 @@ sudo pip install wheel
 echo "##################################################"
 sudo pip install cython
 echo "##################################################"
-sudo pip install pandas
+sudo apt-get install python-pandas -y
 echo "##################################################"
 sudo pip install functools32
 echo "##################################################"
@@ -44,7 +44,7 @@ echo "##################################################"
 echo "Installing Vamp-Examples"
 cd ~/MUSIC_DEAF/music_for_deaf/auris-scripts/Files/vamp-1.1.0
 sudo python setup.py install
-sudo apt-get install vamp-examples
+sudo apt-get install vamp-examples -y
 echo "##################################################"
 
 echo "Copying Melodia Lib"
@@ -70,4 +70,16 @@ echo "##################################################"
 echo "Installing Jams"
 cd ~/MUSIC_DEAF/music_for_deaf/auris-scripts/Files/jams-master
 sudo python setup.py install
+echo "##################################################"
+
+echo "Installing Flask"
+sudo pip install flask
+echo "##################################################"
+
+echo "Installing Puredata - BE SURE YOU ARE USING UBUNTU 14.04LTS or less version."
+sudo add-apt-repository ppa:eighthave/pd-extended
+sudo apt-get update
+sudo apt-get install pd-extended
+cd ~/MUSIC_DEAF/music_for_deaf/auris-core/auris-filter/src
+g++ main.cpp -o main
 echo "##################################################"

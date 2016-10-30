@@ -15,20 +15,21 @@ echo "##################################################"
 
 echo "Cloning repositories from GIT-LAB"
 cd music_for_deaf/
-git clone git@gitlab.lavid.ufpb.br:auris/auris-controller.git
-git clone git@gitlab.lavid.ufpb.br:auris/auris-scripts.git
+git clone git@gitlab.lavid.ufpb.br:auris/auris-controller.git || git pull origin master
+git clone git@gitlab.lavid.ufpb.br:auris/auris-scripts.git || || git pull origin master
+git clone git@gitlab.lavid.ufpb.br:auris/auris-server.git || git pull origin master
 echo "##################################################"
 cd auris-core/
-git clone git@gitlab.lavid.ufpb.br:auris/midi-melody-generator.git
-git clone git@gitlab.lavid.ufpb.br:auris/auris-stream.git
-git clone git@gitlab.lavid.ufpb.br:auris/auris-filter.git
+git clone git@gitlab.lavid.ufpb.br:auris/midi-melody-generator.git || git pull origin master
+git clone git@gitlab.lavid.ufpb.br:auris/auris-stream.git || git pull origin master
+git clone git@gitlab.lavid.ufpb.br:auris/auris-filter.git || git pull origin master
 echo "##################################################"
 cd ..
 cd auris-drivers/
-git clone git@gitlab.lavid.ufpb.br:auris/auris-bracelet.git
+git clone git@gitlab.lavid.ufpb.br:auris/auris-bracelet.git || git pull origin master
 echo "##################################################"
 
 echo "Installing all dependencies"
 cd ~/MUSIC_DEAF/music_for_deaf/auris-scripts
-sudo chmod 755 setupScript
-./setupScript
+sudo chmod 755 dependencies_Setup
+./dependencies_Setup
