@@ -3,6 +3,7 @@
 These Scripts were made to install all content files necessary to Run Auris Modules.
 
 These Modules includes:
+
 - Auris Controller
 - Auris Server
 - Auris Filters
@@ -16,6 +17,33 @@ There are two main Scripts:
 
   - mainAuris_Setup - Create all folders and clone all Auris Modules Git Repositories
   - dependencies_Setup - Install all dependencies necessary to run Midi-Melody Generator and Auris-Files Generator
+
+
+Which Install:
+
+- FFMPEG
+- Numpy
+- Scipy
+- Python-PIP
+- Wheel
+- Cython
+- Pandas
+- Functools32
+- Distribute
+- Librosa
+- Scikits
+- Flask
+- PureData (FOR UBUNTU 14.04LTS OR LESS ONLY)
+
+
+And includes other 5 dependencies files to be installed:
+
+- JAMS
+- libsamplerate - 0.1.8
+- MIDIutil - 0.89
+- Melodia - 1.0
+- VAMP - 1.1.0
+
 
 Give permission to *mainAuris_Setup* script:
 ```sh
