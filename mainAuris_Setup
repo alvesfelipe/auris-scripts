@@ -16,7 +16,7 @@ echo "##################################################"
 echo "Cloning repositories from GIT-LAB"
 cd music_for_deaf/
 git clone git@gitlab.lavid.ufpb.br:auris/auris-controller.git || git pull origin master
-git clone git@gitlab.lavid.ufpb.br:auris/auris-scripts.git || || git pull origin master
+git clone git@gitlab.lavid.ufpb.br:auris/auris-scripts.git || git pull origin master
 git clone git@gitlab.lavid.ufpb.br:auris/auris-server.git || git pull origin master
 echo "##################################################"
 cd auris-core/
