@@ -1,8 +1,6 @@
 #!/bin/bash
 # Script made to install all Auris Controller and folders for Music_for_deaf project.
 
-cd ~/
-
 echo "Creating MUSIC_DEAF folder"
 mkdir -p MUSIC_DEAF
 echo "##################################################"
@@ -16,7 +14,7 @@ echo "##################################################"
 echo "Cloning repositories from GIT-LAB"
 cd music_for_deaf/
 git clone git@gitlab.lavid.ufpb.br:auris/auris-controller.git || git pull origin master
-git clone git@gitlab.lavid.ufpb.br:auris/auris-scripts.git || || git pull origin master
+git clone git@gitlab.lavid.ufpb.br:auris/auris-scripts.git || git pull origin master
 git clone git@gitlab.lavid.ufpb.br:auris/auris-server.git || git pull origin master
 echo "##################################################"
 cd auris-core/
@@ -30,6 +28,7 @@ git clone git@gitlab.lavid.ufpb.br:auris/auris-bracelet.git || git pull origin m
 echo "##################################################"
 
 echo "Installing all dependencies"
-cd ~/MUSIC_DEAF/music_for_deaf/auris-scripts
+cd ..
+cd auris-scripts/
 sudo chmod 755 dependencies_Setup
 ./dependencies_Setup

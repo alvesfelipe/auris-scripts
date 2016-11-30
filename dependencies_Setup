@@ -42,13 +42,14 @@ sudo pip install scikits.samplerate
 echo "##################################################"
 
 echo "Installing Vamp-Examples"
-cd ~/MUSIC_DEAF/music_for_deaf/auris-scripts/Files/vamp-1.1.0
+cd Files/vamp-1.1.0
 sudo python setup.py install
 sudo apt-get install vamp-examples -y
 echo "##################################################"
 
 echo "Copying Melodia Lib"
-cd ~/MUSIC_DEAF/music_for_deaf/auris-scripts/Files/MTG-MELODIA\ 1.0
+cd ..
+cd MTG-MELODIA\ 1.0
 sudo cp mtg-melodia.cat /usr/lib/vamp/
 sudo cp mtg-melodia.n3 /usr/lib/vamp/
 sudo cp mtg-melodia.so /usr/lib/vamp/
@@ -56,19 +57,22 @@ sudo cp README_linux64.txt /usr/lib/vamp/
 sudo cp MELODIA\ -\ License.txt /usr/lib/vamp/
 echo "##################################################"
 
-cd ~/MUSIC_DEAF/music_for_deaf/auris-scripts/Files/libsamplerate-0.1.8
+cd ..
+cd libsamplerate-0.1.8
 ./configure
 make
 sudo make install
 echo "##################################################"
 
 echo "Installing MIDIUtil"
-cd ~/MUSIC_DEAF/music_for_deaf/auris-scripts/Files/MIDIUtil-0.89
+cd ..
+cd MIDIUtil-0.89
 sudo python setup.py install
 echo "##################################################"
 
 echo "Installing Jams"
-cd ~/MUSIC_DEAF/music_for_deaf/auris-scripts/Files/jams-master
+cd ..
+cd jams-master
 sudo python setup.py install
 echo "##################################################"
 
@@ -80,6 +84,18 @@ echo "Installing Puredata - BE SURE YOU ARE USING UBUNTU 14.04LTS or less versio
 sudo add-apt-repository ppa:eighthave/pd-extended
 sudo apt-get update
 sudo apt-get install pd-extended
-cd ~/MUSIC_DEAF/music_for_deaf/auris-core/auris-filter/src
+cd ..
+cd ..
+cd ..
+cd auris-core/auris-filter/src
 g++ main.cpp -o main
 echo "##################################################"
+
+echo "Running Midi-Melody Controller"
+cd ..
+cd ..
+cd ..
+cd auris-controller
+make install
+make
+echo "#################################################"
