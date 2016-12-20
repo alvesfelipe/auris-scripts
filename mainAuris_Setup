@@ -32,3 +32,9 @@ cd ..
 cd auris-scripts/
 sudo chmod 755 dependencies_Setup
 ./dependencies_Setup
+
+echo "Installing essencia"
+cd ..
+cd auris-scripts
+sudo chmod 755 instalacao_essentia_final.sh
+./instalacao_essentia_final.sh
