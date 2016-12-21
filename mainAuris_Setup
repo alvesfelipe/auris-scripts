@@ -8,7 +8,7 @@ echo "##################################################"
 echo "Creating MUSIC_DEAF subfolders"
 cd MUSIC_DEAF/
 mkdir -p music_for_deaf/{auris-core/,auris-drivers/}
-mkdir -p music_for_deaf_files/{audios/,auris_melodies/,midis/, audios_filtered/}
+mkdir -p music_for_deaf_files/{audios/,auris_melodies/,midis/,audios_filtered/}
 echo "##################################################"
 
 echo "Cloning repositories from GIT-LAB"
