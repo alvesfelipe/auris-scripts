@@ -87,8 +87,8 @@ sudo apt-get install pd-extended
 cd ..
 cd ..
 cd ..
-cd auris-core/auris-filter/src
-g++ main.cpp -o main
+cd auris-core/auris-filter/Auris_PD
+make
 echo "##################################################"
 
 echo "Running Midi-Melody Controller"
