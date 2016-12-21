@@ -8,7 +8,7 @@ echo "##################################################"
 echo "Creating MUSIC_DEAF subfolders"
 cd MUSIC_DEAF/
 mkdir -p music_for_deaf/{auris-core/,auris-drivers/}
-mkdir -p music_for_deaf_files/{audios/,auris_melodies/,midis/}
+mkdir -p music_for_deaf_files/{audios/,auris_melodies/,midis/, audios_filtered/}
 echo "##################################################"
 
 echo "Cloning repositories from GIT-LAB"
@@ -16,7 +16,10 @@ cd music_for_deaf/
 git clone git@gitlab.lavid.ufpb.br:auris/auris-controller.git || git pull origin master
 git clone git@gitlab.lavid.ufpb.br:auris/auris-scripts.git || git pull origin master
 git clone git@gitlab.lavid.ufpb.br:auris/auris-server.git || git pull origin master
+cd auris-server/
+git clone git@gitlab.lavid.ufpb.br:auris/front.git || git pull origin master
 echo "##################################################"
+cd ..
 cd auris-core/
 git clone git@gitlab.lavid.ufpb.br:auris/midi-melody-generator.git || git pull origin master
 git clone git@gitlab.lavid.ufpb.br:auris/auris-stream.git || git pull origin master
@@ -33,8 +36,11 @@ cd auris-scripts/
 sudo chmod 755 dependencies_Setup
 ./dependencies_Setup
 
-echo "Installing essencia"
+echo "Installing essentia"
 cd ..
 cd auris-scripts
 sudo chmod 755 instalacao_essentia_final.sh
 ./instalacao_essentia_final.sh
+cd ..
+cd auris-core/auris-filter/Auris_Essentia/
+make
