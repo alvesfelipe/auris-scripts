@@ -1,6 +1,7 @@
 #!/bin/bash
 # Script made to install all Auris Controller and folders for Music_for_deaf project.
 
+cd ..
 echo "Creating MUSIC_DEAF folder"
 mkdir -p MUSIC_DEAF
 echo "##################################################"
@@ -40,7 +41,7 @@ echo "Installing essentia"
 cd ..
 cd auris-scripts
 sudo chmod 755 instalacao_essentia_final.sh
-./instalacao_essentia_final.sh
+./script_essentia.sh
 cd ..
 cd auris-core/auris-filter/Auris_Essentia/
 make
