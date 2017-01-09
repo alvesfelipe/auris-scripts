@@ -89,7 +89,10 @@ echo "##################################################"
 #cd ..
 #cd auris-core/auris-filter/Auris_PD
 #make
-#echo "##################################################"
+cd ..
+cd ..
+sudo chmod 755 puredata.sh
+echo "##################################################"
 
 echo "Running Midi-Melody Controller"
 cd ..

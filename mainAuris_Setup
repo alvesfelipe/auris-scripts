@@ -40,7 +40,7 @@ sudo chmod 755 dependencies_Setup
 echo "Installing essentia"
 cd ..
 cd auris-scripts
-sudo chmod 755 instalacao_essentia_final.sh
+sudo chmod 755 script_essentia.sh
 ./script_essentia.sh
 cd ..
 cd auris-core/auris-filter/Auris_Essentia/
