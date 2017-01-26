@@ -14,21 +14,21 @@ echo "##################################################"
 
 echo "Cloning repositories from GIT-LAB"
 cd music_for_deaf/
-git clone git@gitlab.lavid.ufpb.br:auris/auris-controller.git || git pull origin master
-git clone git@gitlab.lavid.ufpb.br:auris/auris-scripts.git || git pull origin master
-git clone git@gitlab.lavid.ufpb.br:auris/auris-server.git || git pull origin master
+git clone git@github.com:auris-project/auris-controller.git || git pull origin master
+git clone git@github.com:auris-project/auris-scripts.git || git pull origin master
+git clone git@github.com:auris-project/auris-server.git || git pull origin master
 cd auris-server/
-git clone git@gitlab.lavid.ufpb.br:auris/front.git || git pull origin master
+git clone git@github.com:auris-project/auris-front.git || git pull origin master
 echo "##################################################"
 cd ..
 cd auris-core/
-git clone git@gitlab.lavid.ufpb.br:auris/midi-melody-generator.git || git pull origin master
-git clone git@gitlab.lavid.ufpb.br:auris/auris-stream.git || git pull origin master
-git clone git@gitlab.lavid.ufpb.br:auris/auris-filter.git || git pull origin master
+git clone git@github.com:auris-project/midi-melody-generator.git || git pull origin master
+git clone git@github.com:auris-project/auris-stream.git || git pull origin master
+git clone git@github.com:auris-project/auris-filter.git || git pull origin master
 echo "##################################################"
 cd ..
 cd auris-drivers/
-git clone git@gitlab.lavid.ufpb.br:auris/auris-bracelet.git || git pull origin master
+git clone git@github.com:auris-project/auris-bracelet.git || git pull origin master
 echo "##################################################"
 
 echo "Installing all dependencies"
